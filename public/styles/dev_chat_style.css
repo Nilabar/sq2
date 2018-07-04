@@ -1,0 +1,466 @@
+@font-face {
+    font-family: myBatmanFont;
+    src: url("http://nilabar.h1n.ru/sq2/style/fonts/");
+}
+
+#logo-server ,#logo-game{
+    color: #fff;
+    font-size: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0px;
+    display: inline-block;
+    position: relative;
+    font-family: 'myBatmanFont', monospace;
+    -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+    -webkit-mask-size: 200%;
+    animation: shine 4s linear infinite;
+    
+    
+}
+
+.flip-horizontal{
+   -moz-transform:scale(-1, 1);
+    transform:scale(-1, 1)!important;
+    -webkit-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1); 
+}
+
+body {
+	background-color: black;
+	background: url("https://starquake2.ru/img/bg3.jpg") no-repeat center center fixed;
+	
+	font-family: 'Jura', sans-serif;
+	background-size: cover;
+	
+}
+
+#menuarea{
+    height: 10%;
+    border: 0px #33ff00 solid;    
+}
+
+#gamearea{
+    height: 60%;
+    border: 0px #4285F4 dashed;
+}
+
+#chatarea{
+    height: 30%;
+    border: 0px #33ff00 solid;
+    background-color: rgba(0,0,0,.7);
+}
+
+
+
+#chat-block ,#online-block ,#info-block ,.modal-content {
+    border: 2px solid #3f3f40;
+    box-shadow: 0 0 25px #757590;
+    padding: 0;
+    border-radius: 6px;
+}
+
+.card ,.modal-content{
+    background-color: rgba(0,0,0,0);
+}
+
+
+.modal-title{
+    padding-left: .5rem
+}
+.modal-header{
+    border-bottom: 1px rgba(0,0,0,.125);
+    
+}
+
+.modal-body{
+    padding-left: 2rem !important;
+    background-color: rgba(30, 29, 54, 0.84);
+    
+}
+
+.modal-footer{
+    background-color: rgba(0,0,0,0.7);
+    border:none;
+    border-radius: 0 0 6px 6px
+}
+
+.scrollbar.about-admitted{
+    max-height: 12rem;
+    
+    background-color: rgba(8, 6, 28, .9);
+    border-style: inset;
+    
+    border-radius: 6px;
+}
+
+.text-greenyellow{
+    color:greenyellow !important;
+}
+
+.chat-strong{
+    font-weight: bold
+}
+
+.card-header ,.modal-header{
+    max-height: 16%;
+    padding: 0;
+}
+.card-header ,.modal-header{
+background: -moz-linear-gradient(90deg, rgba(0,0,0,0.7) 0%, rgba(30,29,54,1) 100%); /* ff3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(30,29,54,1)), color-stop(100%, rgba(0,0,0,0.7))); /* safari4+,chrome */
+background: -webkit-linear-gradient(90deg, rgba(0,0,0,0.7) 0%, rgba(30,29,54,1) 100%); /* safari5.1+,chrome10+ */
+background: -o-linear-gradient(90deg, rgba(0,0,0,0.7) 0%, rgba(30,29,54,1) 100%); /* opera 11.10+ */
+background: -ms-linear-gradient(90deg, rgba(0,0,0,0.7) 0%, rgba(30,29,54,1) 100%); /* ie10+ */
+background: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, rgba(30,29,54,1) 100%); /* w3c */
+}
+.card-body {
+    min-height: 65%;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left:0;
+    padding-right: 0;
+    font-family: "Ubuntu", monospace;
+	font-size: 16px;
+}
+
+
+.card-footer{
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border: none;
+    padding-left:0;
+    padding-right: 0;
+}
+#emojy-btn {
+	min-height: 32px;
+	min-width: 32px;
+	background: url("http://nilabar.h1n.ru/sq2/img/smile.png") no-repeat;
+}
+
+#emojy-btn:hover{
+       background-size: 110%;
+}
+
+.btn.chat-ui.action{
+    color: #3e5ad2;
+}
+
+.btn-dark.chat {
+	background: url("http://nilabar.h1n.ru/sq2/img/send_btn.png") no-repeat;
+	background-size: cover;
+	border-style: none;
+	color: gray
+}
+.btn-dark.chat:hover {
+	background: url("http://nilabar.h1n.ru/sq2/img/send_btn_hover.png") no-repeat;
+	background-size: cover;
+	border-style: none;
+	color: goldenrod;
+}
+#message-input-area ,#chl-search-input ,.about-input{
+	color: whitesmoke !important;
+	background: url("http://nilabar.h1n.ru/sq2/img/input_bg.png") no-repeat;
+	background-size: cover;
+	border-style: none;
+}
+
+#chl-search-input{
+    border-radius: 12px 0 0 12px;
+    margin-right: 1px;
+}
+
+#channels-list-search > div.input-group > div.input-group-btn > .btn{
+    border-radius: 0;
+    margin-top: 1px;
+    margin-right: 1px    
+}
+
+.scrollbar{
+    padding-left: .5rem;
+    padding-right: .5rem;
+    overflow-y: auto;
+    /*max-height: 65%;*/
+}
+.scrollbar::-webkit-scrollbar {
+	background: url("http://nilabar.h1n.ru/sq2/img/scrollbar.png")no-repeat;
+	width: 14px;
+	border-radius: 6px
+}
+.scrollbar::-webkit-scrollbar-track {
+	/*background: url("../ex_img/scrollbar.png")no-repeat ;*/
+}
+.scrollbar::-webkit-scrollbar-button:start {
+	background: url("http://nilabar.h1n.ru/sq2/img/scrollbar_button_start.png")no-repeat center;
+}
+.scrollbar::-webkit-scrollbar-button:end {
+	background: url("http://nilabar.h1n.ru/sq2/img/scrollbar_button_end.png")no-repeat center;
+}
+.scrollbar::-webkit-scrollbar-thumb:vertical {
+	background: url("http://nilabar.h1n.ru/sq2/img/scroll_thumb.png")no-repeat center;
+	background-size: 10px 47px;
+}
+
+#server-workload {
+	max-height: 6px;
+	background: black;
+	border: 1px ridge rgba(0, 0, 0, 0.8);
+	box-shadow: 0 0 10px #757590;
+}
+#server-workload-bar {
+	background: -moz-linear-gradient(360deg, rgba(255, 0, 0, 1) 0%, rgba(0, 255, 0, 1) 100%);
+	/* ff3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(255, 0, 0, 1)), color-stop(100%, rgba(0, 255, 0, 1)));
+	/* safari4+,chrome */
+	background: -webkit-linear-gradient(360deg, rgba(255, 0, 0, 1) 0%, rgba(0, 255, 0, 1) 100%);
+	/* safari5.1+,chrome10+ */
+	background: -o-linear-gradient(360deg, rgba(255, 0, 0, 1) 0%, rgba(0, 255, 0, 1) 100%);
+	/* opera 11.10+ */
+	background: -ms-linear-gradient(360deg, rgba(255, 0, 0, 1) 0%, rgba(0, 255, 0, 1) 100%);
+	/* ie10+ */
+	background: linear-gradient(90deg, rgba(255, 0, 0, 1) 0%, rgba(0, 255, 0, 1) 100%);
+	/* w3c */
+	
+}
+#online-progress-container {
+	margin: 0 5%
+}
+
+.chl-tabs-item{
+    
+}
+
+#chl-tabs-area > div.bg-dark{
+    
+    background-color: rgba(168, 131, 187, 0.33)!important;
+    border: 1px #222139 solid;
+}
+
+#chl-tabs-area > div.bg-dark.chl-tabs-ui{
+    
+    background-color: rgba(20, 20, 41 ,0.9)!important;
+    border: 1px #222139 solid;
+}
+
+#chl-tabs-area > div.bg-dark.action{
+    
+    background-color: rgba(168, 131, 187, 0.33)!important;
+    border: 1px #222139 solid;
+    color: #3e5ad2 !important;
+}
+a.btn-chl ,a.btn-close{
+    padding: 0 .25rem 0 .25rem;
+}
+a.btn-close:hover{
+        color: orangered !important;
+}
+a.btn-chl-ui:hover{
+    color: #ffff33 !important;
+}
+
+div.tabs-first-el{
+    border-radius: 6px 0 0 6px;
+}
+div.tabs-last-el{
+    border-radius: 0 6px 6px 0;
+}
+
+
+.msg-time {
+	color: #bfbfbf;
+}
+.msg-from {
+	color: whitesmoke;
+        
+}
+.msg-from:hover {
+	text-decoration: underline;
+        cursor: pointer;
+}
+
+.chat-text-blue {
+	color: #00FFFF
+}
+.chat-text-alert {
+	color: #FF8000
+}
+.chat-message {
+	word-wrap: break-word;
+}
+
+.text-terminal-success{
+    text-shadow:
+        0 0 5px rgba(255,204,0,1),
+        0 0 10px rgba(255,176,0,1),
+        0 0 20px rgba(217, 217, 217,1);
+    color: rgb(102,255,102);
+}
+
+.chl-list-item ,.user-online-item ,.about-admitted-item{
+    min-width: 100%;
+}
+
+.chl-list-item.action{
+    background: rgba(30, 30, 64, 0.75);
+    border-radius: 4px;
+}
+
+.chl-list-item > a.btn ,.user-online-item > a.btn{
+    padding: .225rem;
+}
+
+.chl-list-item > a.btn >i.fa-info:hover{
+    color:yellowgreen;
+}
+
+.chl-list-item > a.btn >i.fa-sign-in:hover{
+    color:limegreen;
+}
+
+.chl-list-item > a.btn >i.fa-sign-out:hover{
+    color:red;
+}
+
+.user-online-item > a.btn >i.fa-address-card:hover{
+    color:yellowgreen;
+}
+
+.user-online-item > a.btn >i.fa-plus-square:hover{
+    color:limegreen;
+}
+
+.online-privat-el:hover{
+    color:orangered !important;
+    cursor: cell;
+}
+
+a.btn.list-item-info-el{
+    border-radius: 6px !important;
+}
+
+a.btn.list-item-info-el >i{
+    padding-left: .25rem
+}
+a.btn.list-item-info-el >i.fa-envelope-o.action{
+    
+    color:#ff6600 ;
+    font-weight: bold
+}
+
+.modal.chat{
+    
+}
+
+
+.btn-mui:hover > img{
+    background: url("http://nilabar.h1n.ru/sq2/img/circle_h_mui.png") no-repeat;
+}
+.btn-mui:hover > small{
+    text-shadow: 0 0 5px rgb(172, 173, 25), 0 0 10px #007bff, 0 0 20px rgba(217, 217, 217,1);
+    color: rgb(37, 177, 246);
+}
+
+#info-system{
+    font-size: .8rem;
+    margin-top: 150%;
+}
+
+#block-menu-container{
+    background: url("http://nilabar.h1n.ru/sq2/img/block_menu_bg.png") no-repeat;
+}
+#block-user-container{
+    background: url("http://nilabar.h1n.ru/sq2/img/block_user_bg.png") no-repeat;
+}
+
+#user-canvas-cont{
+    position: absolute;
+}
+#user-canvas{
+    background: rgba(0,0,0,0); 
+    width: 100%;
+    height: auto;
+    z-index: 99;
+}
+
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {display:none;}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+.donut-spinner {
+  position: relative;
+    top: 50%;
+    left: 50%;  
+  display: inline-block;
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #7983ff;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: donut-spin 1.2s linear infinite;
+}
+
+@keyframes donut-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
