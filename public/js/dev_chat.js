@@ -3,7 +3,7 @@
  */
 const CHAT = {
 	VERSION: "0.2f.27.06.18",
-        DEV:true,
+        DEV:false,
         PATCH:"0"
 };
 
@@ -13,7 +13,6 @@ var auth = false;
 var currentChannel;
 var isReconnect = false;
 var aboutQueue =[];
-var me = '6a7aa90e-0b1a-434e-a54c-f4eef1865f31'; var myNick = 'nilabar';
 var emojy_standart,emojy_celebrate,emojy_pirates,emojy_planets,emojy_old,emojy_any;
 var last_message = {
     date:0
@@ -47,7 +46,7 @@ $(window).on("load", () => {
     
     
     
-    //startChat();
+    startChat();
 });
 
 var hideBlock =(btn)=>{

@@ -7,7 +7,7 @@
 -# me_place = Spaceship.find(location.place)
 - ship_location = Spaceship.new(1,1)
 -# ship_location = Location.find_by(parent: me_place.id)
-- ship_place = Astro.new("","Stronghold",8,1,{},{},{})
+- ship_place = Astro.new("","Возрождение",3,1,{},{},{})
 -# ship_place = Astro.find(ship_location.place)
 - ship_place_parents = ship_place.get_parents
 
@@ -26,11 +26,11 @@
           %small= ship_place.name
       %div
         %a#btn-mui-system.btn.btn-mui
-          %img{:src => "http://nilabar.h1n.ru/sq2/img/system_mui.png"}>/
+          %img{:src => "http://nilabar.h1n.ru/sq2/img/system_mui.png"}/
           %small Новый дом
       %div
         %a#btn-mui-claster.btn.btn-mui
-          %img{:src => "http://nilabar.h1n.ru/sq2/img/claster_mui.png"}>/
+          %img{:src => "http://nilabar.h1n.ru/sq2/img/claster_mui.png"}/
           %small а хрен его знает..
           
 - case ship_location.type
@@ -122,12 +122,81 @@
     .d-flex.justify-content-center
       #phaser-box
       -# owner = AstroOwner.find_by(astro:ship_place.id)
-      - owner = AstroOwner.new({:name=>"nilabar"})
+      - owner = AstroOwner.new("Администрация")
       - if ship_place.type == 8
         - owner = ""
       - else
+        -# owner = Person.find(owner.owner).name
         - owner = owner.owner
-      %a#loc-planet.d-none{:data=>{:planet_type => ship_place.type ,:planet_genus => ship_place.genus,:owner => owner}}
+      %a#loc-planet.d-none{:data=>{:planet_name => ship_place.name ,:planet_type => ship_place.type ,:planet_genus => ship_place.genus,:planet_owner => owner}}
+      %div{:style=>"position:absolute;right:0;color:#7482a2"}
+        .card{:style=>"width:300px;background: #02000a4d"}
+          .card-header.btn-group.btn-group-sm.d-inline-flex.justify-content-end
+            .btn.disabled.text-secondary.mr-auto
+              %i.fa.fa-fighter-jet
+              %span#radar-user.badge.badge-dark 999
+            %button.btn.btn-dark.chat.block-close-btn
+              %i.fa.fa-times  
+              
+          #radar-point.card-body 
+            %div.scrollbar#neighbors{:style=>"height:15.5rem"}
+              %div.radar-item.btn-group.d-inline-flex.justify-content-end
+                %span.btn.disabled.mr-auto Оплот
+                %span.btn
+                  %img{:src=>"/img/assets/sheep-1.png"}
+                %a.btn
+                  %i.fa.fa-sign-in
+              %div.radar-item.btn-group.d-inline-flex.justify-content-end.bg-ngrey
+                %span.btn.disabled.mr-auto тип 1
+                %span.btn
+                  %img{:src=>"/img/assets/sheep-2.png"}
+                %a.btn
+                  %i.fa.fa-crosshairs
+              %div.radar-item.btn-group.d-inline-flex.justify-content-end
+                %span.btn.disabled.mr-auto тип 1
+                %span.btn
+                  %img{:src=>"/img/assets/sheep-2.png"}
+                %a.btn
+                  %i.fa.fa-crosshairs
+              %div.radar-item.btn-group.d-inline-flex.justify-content-end.bg-ngrey
+                %span.btn.disabled.mr-auto тип 1
+                %span.btn
+                  %img{:src=>"/img/assets/sheep-2.png"}
+                %a.btn.disabled
+                  %i.fa.fa-wrench
+              %div.radar-item.btn-group.d-inline-flex.justify-content-end
+                %span.btn.disabled.mr-auto тип 1
+                %span.btn
+                  %img{:src=>"/img/assets/sheep-2.png"}
+                %a.btn
+                  %i.fa.fa-crosshairs
+              %div.radar-item.btn-group.d-inline-flex.justify-content-end.bg-ngrey
+                %span.btn.disabled.mr-auto тип 1
+                %span.btn
+                  %img{:src=>"/img/assets/sheep-2.png"}
+                %a.btn
+                  %i.fa.fa-crosshairs
+              %div.radar-item.btn-group.d-inline-flex.justify-content-end
+                %span.btn.disabled.mr-auto тип 1
+                %span.btn
+                  %img{:src=>"/img/assets/sheep-2.png"}
+                %a.btn
+                  %i.fa.fa-crosshairs
+              %div.radar-item.btn-group.d-inline-flex.justify-content-end.bg-ngrey
+                %span.btn.disabled.mr-auto тип 1
+                %span.btn
+                  %img{:src=>"/img/assets/sheep-2.png"}
+                %a.btn
+                  %i.fa.fa-crosshairs
+              %div.radar-item.btn-group.d-inline-flex.justify-content-end
+                %span.btn.disabled.mr-auto тип 1
+                %span.btn
+                  %img{:src=>"/img/assets/sheep-2.png"}
+                %a.btn
+                  %i.fa.fa-crosshairs    
+                
+          .card-footer.d-none{:style=>"background: #2b3046c9;"}
+            %span footer
       %script{:defer => true , :src => "js/phaserOrbit.js"}
       
 .col-md-1

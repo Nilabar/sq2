@@ -41,7 +41,7 @@ body {
 }
 
 #gamearea{
-    height: 60%;
+    min-height: 60vh;
     border: 0px #4285F4 dashed;
 }
 
@@ -296,7 +296,7 @@ div.tabs-last-el{
     color: rgb(102,255,102);
 }
 
-.chl-list-item ,.user-online-item ,.about-admitted-item{
+.chl-list-item ,.user-online-item ,.radar-item ,.about-admitted-item{
     min-width: 100%;
 }
 
@@ -345,6 +345,20 @@ a.btn.list-item-info-el >i.fa-envelope-o.action{
     
     color:#ff6600 ;
     font-weight: bold
+}
+
+.bg-ngrey{
+  background : #212539a8;
+  border-radius:4px;
+}
+
+.radar-item > span > img{
+  min-width:3rem;
+  max-width:3rem;
+}
+
+.radar-item > .btn{
+  padding:.175rem .75rem !important;
 }
 
 .modal.chat{
