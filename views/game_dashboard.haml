@@ -130,70 +130,24 @@
         - owner = owner.owner
       %a#loc-planet.d-none{:data=>{:planet_name => ship_place.name ,:planet_type => ship_place.type ,:planet_genus => ship_place.genus,:planet_owner => owner}}
       %div{:style=>"position:absolute;right:0;color:#7482a2"}
-        .card{:style=>"width:300px;background: #02000a4d"}
+        .card{:style=>"width:30vw;background: #02000a4d"}
           .card-header.btn-group.btn-group-sm.d-inline-flex.justify-content-end
             .btn.disabled.text-secondary.mr-auto
               %i.fa.fa-fighter-jet
               %span#radar-user.badge.badge-dark 999
+            %button.btn.btn-dark.chat
+              %i.fa.fa-stop
+            %button.btn.btn-dark.chat.active
+              %i.fa.fa-play
+            %button.btn.btn-dark.chat
+              %i.fa.fa-forward
+            %button.btn.btn-dark.chat
+              %i.fa.fa-refresh  
             %button.btn.btn-dark.chat.block-close-btn
               %i.fa.fa-times  
               
           #radar-point.card-body 
-            %div.scrollbar#neighbors{:style=>"height:15.5rem"}
-              %div.radar-item.btn-group.d-inline-flex.justify-content-end
-                %span.btn.disabled.mr-auto Оплот
-                %span.btn
-                  %img{:src=>"/img/assets/sheep-1.png"}
-                %a.btn
-                  %i.fa.fa-sign-in
-              %div.radar-item.btn-group.d-inline-flex.justify-content-end.bg-ngrey
-                %span.btn.disabled.mr-auto тип 1
-                %span.btn
-                  %img{:src=>"/img/assets/sheep-2.png"}
-                %a.btn
-                  %i.fa.fa-crosshairs
-              %div.radar-item.btn-group.d-inline-flex.justify-content-end
-                %span.btn.disabled.mr-auto тип 1
-                %span.btn
-                  %img{:src=>"/img/assets/sheep-2.png"}
-                %a.btn
-                  %i.fa.fa-crosshairs
-              %div.radar-item.btn-group.d-inline-flex.justify-content-end.bg-ngrey
-                %span.btn.disabled.mr-auto тип 1
-                %span.btn
-                  %img{:src=>"/img/assets/sheep-2.png"}
-                %a.btn.disabled
-                  %i.fa.fa-wrench
-              %div.radar-item.btn-group.d-inline-flex.justify-content-end
-                %span.btn.disabled.mr-auto тип 1
-                %span.btn
-                  %img{:src=>"/img/assets/sheep-2.png"}
-                %a.btn
-                  %i.fa.fa-crosshairs
-              %div.radar-item.btn-group.d-inline-flex.justify-content-end.bg-ngrey
-                %span.btn.disabled.mr-auto тип 1
-                %span.btn
-                  %img{:src=>"/img/assets/sheep-2.png"}
-                %a.btn
-                  %i.fa.fa-crosshairs
-              %div.radar-item.btn-group.d-inline-flex.justify-content-end
-                %span.btn.disabled.mr-auto тип 1
-                %span.btn
-                  %img{:src=>"/img/assets/sheep-2.png"}
-                %a.btn
-                  %i.fa.fa-crosshairs
-              %div.radar-item.btn-group.d-inline-flex.justify-content-end.bg-ngrey
-                %span.btn.disabled.mr-auto тип 1
-                %span.btn
-                  %img{:src=>"/img/assets/sheep-2.png"}
-                %a.btn
-                  %i.fa.fa-crosshairs
-              %div.radar-item.btn-group.d-inline-flex.justify-content-end
-                %span.btn.disabled.mr-auto тип 1
-                %span.btn
-                  %img{:src=>"/img/assets/sheep-2.png"}
-                %a.btn
-                  %i.fa.fa-crosshairs    
+            %div.scrollbar#neighbors{:style=>"height:24rem"}    
                 
           .card-footer.d-none{:style=>"background: #2b3046c9;"}
             %span footer

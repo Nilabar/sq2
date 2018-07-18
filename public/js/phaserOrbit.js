@@ -56,7 +56,7 @@ function create(){
     
 
     ""+ph_text_info.name+"\n"+
-    "тип : "+ph_text_info.type+"\n"+
+    ""+ph_text_info.type+"\n"+
     "позиция : "+ph_text_info.pos+"\n"+
     "владелец : "+ph_text_info.owner);
     

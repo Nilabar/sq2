@@ -18,7 +18,7 @@
     %script{:src => "//maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"}
     %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/phaser/2.6.2/phaser.min.js"}
     /%script{:src => "https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.7.1/pixi.min.js"}
-    
+    %script{:src => "js/my.js"}
     
     %link{:href => "styles/dev_chat_style.css", :rel => "stylesheet", :type => "text/css"}/
   %body
@@ -40,6 +40,14 @@
                 %area{:bmkey => "settings", :coords => "131, 64, 157, 64, 155, 103, 147, 103, 125, 91", :href => "#", :shape => "poly"}/
                 %area{:bmkey => "b10", :coords => "41, 159, 51, 118, 75, 123, 80, 156", :href => "#", :shape => "poly"}/
                 %area{:bmkey => "b11", :coords => "37, 152, 46, 123, 24, 109, 3, 131", :href => "#", :shape => "poly"}/
+            #block-adm.ml-auto{:style =>"color:red"}
+              %button#btn-whatsup.btn.btn-dark.chat{:type => "button"} whatsup
+                
+            
+            #block-user-fonds.ml-auto
+              %div
+                %img{:src => "",:style => ""} 
+                %strong#balance 1200k
             #block-user-container.ml-auto
               #user-canvas-cont
                 %canvas#user-canvas{:height => "120", :width => "220"}
@@ -69,45 +77,12 @@
                 %area{:bmkey => "i2", :coords => "133, 109, 148, 83, 135, 69, 109, 85", :href => "#", :shape => "poly"}/
                 %area{:bmkey => "i3", :coords => "170, 119, 169, 89, 151, 84, 135, 111", :href => "#", :shape => "poly"}/
       #gamearea.row
-        .col-md-1{:style => "color: #7482a2;"}
-          .d-flex.align-items-start.flex-column{:style => "height: 90%;"}
-            #info-system.mb-auto
-              %strong Система Новый дом
-              %ul
-                %li планет: 10
-                %li класс: 
-                %li владелец: Администрация
-            %div
-              %a#btn-mui-planet.btn.btn-mui
-                 
-                %img{:src => "http://nilabar.h1n.ru/sq2/img/planet_mui.png"}/
-                / img src="ex_img/circle_h_mui.png"
-                 
-                %small Возрождение
-            %div
-              %a#btn-mui-system.btn.btn-mui
-                 
-                %img{:src => "http://nilabar.h1n.ru/sq2/img/system_mui.png"}>/
-                 
-                %small Новый дом
-            %div
-              %a#btn-mui-claster.btn.btn-mui
-                 
-                %img{:src => "http://nilabar.h1n.ru/sq2/img/claster_mui.png"}>/
-                 
-                %small а хрен его знает..
-        #gamearea-point.col-md-10
-          = yield
-        .col-md-1
-          .d-flex.align-items-start.flex-column.text-danger{:style => "height: 95%;"}
-            .mb-auto
-            %div
-              %a#btn-mui-logout.btn-mui
-                 
-                %img{:src => "http://nilabar.h1n.ru/sq2/img/r_mui.png"}/
+        = yield
+        
       :javascript
       
         var menu_key = 'orbit';
+        var myNick = '#{@person.name}';
         
       
         $(".btn-mui").on("click",(evt)=>{
@@ -130,11 +105,11 @@
         
         
             $( document ).ready(function() {
-        
+            
             var user_canvas=document.getElementById("user-canvas");
             var thumbImg = document.createElement('img');
         
-            thumbImg.src = 'http://nilabar.h1n.ru/sq2/img/avatar_4.jpg';
+            thumbImg.src = 'http://nilabar.h1n.ru/sq2/img/'+'#{@person.avatar}';
             thumbImg.onload = function() {
                 var ch = user_canvas.height;
                 var cw = user_canvas.width;
@@ -149,7 +124,7 @@
                 tmpCtx.strokeStyle='rgb(37, 177, 246)';
                 tmpCtx.fillStyle='rgba(242, 242, 242,.8)';
                 tmpCtx.font = "1rem Ubuntu bold";
-                tmpCtx.fillText("nilabar", 50, 25);   
+                tmpCtx.fillText('#{@person.name}', 50, 25);   
                 tmpCtx.beginPath();
                 tmpCtx.arc(cw-si-mr +r, mr+r, r, 0, Math.PI * 2, true);
                 tmpCtx.closePath();
@@ -293,3 +268,5 @@
                   %input{:type => "checkbox"}/
                   %span.slider.round
     %script{:src => "js/dev_chat.js"}
+    %script{:src => "js/adm.js"}
+    

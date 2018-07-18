@@ -1,6 +1,8 @@
 /*
  *  © Shevcov Ilya, 2017-2018
  */
+// !stop startChat() -->
+// !stop emojisLoad()-->
 const CHAT = {
 	VERSION: "0.2f.27.06.18",
         DEV:false,
@@ -46,7 +48,7 @@ $(window).on("load", () => {
     
     
     
-    startChat();
+   // startChat();
 });
 
 var hideBlock =(btn)=>{
@@ -1055,7 +1057,7 @@ var calcSizeChatBlock =(as,prc)=>{
 var preloadChat =()=>{
       
     //
-    emojisLoad();
+    //emojisLoad();
     //
     var list = $("<div>",{
        "class":"scrollbar info-item d-none",
